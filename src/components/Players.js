@@ -14,7 +14,7 @@ const Players = ({ players }) => (
 )
 
 Players.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.shape({
+  players: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     score: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired

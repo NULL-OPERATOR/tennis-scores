@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import players from './players'
+import game from './game'
 
 const tennisApp = combineReducers({
-  players,
+  game,
 })
 
 export default tennisApp

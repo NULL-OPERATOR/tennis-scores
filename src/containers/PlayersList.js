@@ -3,7 +3,7 @@ import Players from '../components/Players'
 
 
 const mapStateToProps = (state) => ({
-  players: state.players
+  players: state.game.players
 })
 
 // const mapDispatchToProps = {

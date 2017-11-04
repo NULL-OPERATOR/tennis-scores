@@ -1,18 +1,21 @@
-const initialState = [
-  {
-    id: 1,
-    score: 0,
-    name: 'Player 1'
-  },
-  {
-    id: 2,
-    score: 0,
-    name: 'Player 2'
-  }
-]
+const initialState = {
+  winner: 'Player 3',
+  players: [
+    {
+      id: 1,
+      score: 0,
+      name: 'Player 1'
+    },
+    {
+      id: 2,
+      score: 0,
+      name: 'Player 2'
+    }
+  ]
+}
 
 
-const players = (state = initialState, action) => {
+const game = (state = initialState, action) => {
   switch (action.type) {
     case 'INCREASE_SCORE':
       return state
@@ -26,4 +29,4 @@ const players = (state = initialState, action) => {
   }
 }
 
-export default players
+export default game
