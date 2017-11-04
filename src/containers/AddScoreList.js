@@ -10,6 +10,7 @@ const AddScoreList = ({ players, winner, increaseScore }) => (
       <AddScore
         key={player.id}
         winner={winner}
+        playerName={player.name}
         onClick={() => increaseScore(player.id)} />
     )}
   </div>
