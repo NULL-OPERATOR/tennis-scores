@@ -32,11 +32,11 @@ $ node server
 - webpack: v3.8.1  
 
 questions:
-naming conventions for containers??
-is a component that returns null a bad idea?
-mapping components in containers? or have a separate component?
-App.js in containers or components?
-as long as it's pure, the reducer is the best place for logic?
+- naming conventions for containers??
+- is a component that returns null a bad idea?
+- mapping components in containers? or have a separate component?
+- App.js in containers or components?
+- as long as it's pure, the reducer is the best place for logic?
 
 
 [1]: https://www.thoughtco.com/simple-introduction-to-tennis-scoring-for-beginners-3207375
