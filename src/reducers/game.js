@@ -1,6 +1,5 @@
 const initialState = {
-  winner: 'Player 3',
-  tieBreak: false,
+  winner: '',
   players: [
     {
       id: 1,
@@ -25,44 +24,60 @@ const scoresToText = {
   4: 'Advantage'
 }
 
-// tieBreakScoresToText = {
-//   0: '40',
-//   1: 'Advantage'
-// }
-
 
 const updateGameState = (state, id) => {
-    let newState = {...state}
-    let scoring = state.players.find(player => player.id === id)
-    let other = state.players.find(player => player.id !== id)
+    let { winner, players } = state // players not immutable
+    const scoringPlayer = players.find(player => player.id === id)
+    const otherPlayer = players.find(player => player.id !== id)
+    // p1 === id (ie, the player that has scored)
+    const p1 = { ...scoringPlayer }
+    const p2 = { ...otherPlayer }
 
-    if (scoring.score < 3 && !state.tieBreak) {
-      scoring.score += 1
-      scoring.text = scoresToText[scoring.score]
-    }
-    if (scoring.score === 4 && state.tieBreak) {
-      scoring.text = 'Game'
-    }
-    // if () {
-    //
+    // const setP1AsWinner = () => {
+    //   p1.text = 'Game'
+    //   winner = p1.name
     // }
+    // game possibilities
+    if (p1.score < 3) {
+      p1.score += 1
+    }
+    else if (p1.score === 3 && p2.score < 3) {
+      winner = p1.name
+    }
+    // tie break situations
+    else if (p1.score === 4 && p2.score === 3) {
+      winner = p1.name
+    }
+    else if (p1.score === 3 && p2.score === 4) {
+      p2.score = 3
+    }
+    else if (p1.score === 3 && p2.score === 3) {
+      p1.score = 4
+    }
+    console.log(scoresToText[p1.score])
+    p1.scoreText = scoresToText[p1.score]
+    p2.scoreText = scoresToText[p2.score]
 
+    if (winner === p1.name) {
+      p1.scoreText = 'Game'
+    }
+
+    const sortedPlayers = p1.id === 1 ? [p1, p2] : [p2, p1]
+
+    return {
+      winner,
+      players: sortedPlayers
+    }
 
   }
 
-    // }
-  //   return player
-  //   // ? {...player, score: player.score + 1}
-  //   // : player
-  // )
-// }
 
 
 const game = (state = initialState, action) => {
   switch (action.type) {
     case 'INCREASE_SCORE':
-      return state
-      // return updateGameState(state, action.id)
+      // return state
+      return updateGameState(state, action.id)
     default:
       return state
   }
