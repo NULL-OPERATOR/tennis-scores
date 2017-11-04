@@ -1,7 +1,7 @@
 # TENNIS TEST TES :palm_tree:
 ##### scoring for a tennis game with redux.
 
-note: this only scores a *game* not set or match, also this runs node 8.9.0
+scores a *game* (not set or match), also runs on node 8.9.0
 
 [tennis rules][1]
 
