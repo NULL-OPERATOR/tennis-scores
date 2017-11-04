@@ -13,11 +13,17 @@ $ cd tennis-scores
 $ npm i
 ```
 
-to run the dev server
+to run the dev server on default http://localhost:8080/
 ```
 $ npm start
 ```
-build and run the node server
+
+to run the tests
+```
+$ npm test
+```
+
+build and run the node server on default http://localhost:3000/
 ```
 $ npm build
 $ node server
@@ -36,6 +42,7 @@ questions:
 - is a component that returns null a bad idea?
 - mapping components in containers? or have a separate component?
 - App.js in containers or components?
+- where to put tests
 - as long as it's pure, the reducer is the best place for logic?
 
 
