@@ -1,13 +1,22 @@
+import React from 'react'
 import { connect } from 'react-redux'
-import Players from '../components/Players'
+import Player from '../components/Player'
 
+const PlayersList = ({ players }) => (
+  <div>
+    {players.map(player =>
+      <Player
+        key={player.id}
+        {...player}
+      />
+    )}
+  </div>
+)
 
 const mapStateToProps = (state) => ({
   players: state.game.players
 })
 
-const PlayersList = connect(
+export default connect(
   mapStateToProps,
-)(Players)
-
-export default PlayersList
+)(PlayersList)

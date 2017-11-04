@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Status = ({ active, onClick }) => {
+const AddScore = ({ active, onClick }) => {
   console.log(active, onClick)
 
   if (active) {
@@ -14,9 +14,9 @@ const Status = ({ active, onClick }) => {
   )
 }
 
-Status.propTypes = {
+AddScore.propTypes = {
   active: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired
 }
 
-export default Status
+export default AddScore

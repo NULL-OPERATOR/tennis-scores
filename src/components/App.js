@@ -1,13 +1,13 @@
 import React from 'react'
 import PlayersList from '../containers/PlayersList'
 import GameStatus from '../containers/GameStatus'
-import AddScores from '../containers/AddScores'
+import AddScoreList from '../containers/AddScoreList'
 
 const App = () => (
   <div>
     <PlayersList />
     <GameStatus />
-    <AddScores />
+    <AddScoreList />
     {/* <Reset /> */}
   </div>
 )
