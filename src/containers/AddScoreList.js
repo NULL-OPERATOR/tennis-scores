@@ -20,7 +20,6 @@ const mapStateToProps = (state) => ({
   active: state.game.winner,
 })
 
-
 export default connect(
   mapStateToProps,
   { increaseScore }

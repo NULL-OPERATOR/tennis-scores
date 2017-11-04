@@ -1,5 +1,10 @@
-# TENNIS TEST TES
-##### *Game* scoring, for a tennis game.
+# TENNIS TEST TES :palm_tree:
+##### scoring for a tennis game with redux.
+
+note: this only scores a *game* not set or match, also this runs node 8.9.0
+
+[tennis rules][1]
+
 
 clone & install
 ```
@@ -19,14 +24,18 @@ $ node server
 
 
 
-node: v8.9.0
-express: v4.16.2
-react: v16.0.0
-redux: v3.7.2
-webpack: v3.8.1
+- node: v8.9.0
+- express: v4.16.2  
+- react: v16.0.0  
+- redux: v3.7.2  
+- webpack: v3.8.1  
 
 questions:
 naming conventions for containers??
-component with return null a good idea?
-
+is a component that returns null a bad idea?
+mapping components in containers? or have a separate component?
 App.js in containers or components?
+as long as it's pure, the reducer is the best place for logic?
+
+
+[1]: https://www.thoughtco.com/simple-introduction-to-tennis-scoring-for-beginners-3207375
