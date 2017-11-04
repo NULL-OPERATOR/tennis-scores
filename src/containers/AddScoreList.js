@@ -4,12 +4,12 @@ import { increaseScore } from '../actions'
 import AddScore from '../components/AddScore'
 
 
-const AddScoreList = ({ players, active, increaseScore }) => (
+const AddScoreList = ({ players, winner, increaseScore }) => (
   <div>
     {players.map(player =>
       <AddScore
         key={player.id}
-        active={active}
+        winner={winner}
         onClick={() => increaseScore(player.id)} />
     )}
   </div>
@@ -17,7 +17,7 @@ const AddScoreList = ({ players, active, increaseScore }) => (
 
 const mapStateToProps = (state) => ({
   players: state.game.players,
-  active: state.game.winner,
+  winner: state.game.winner,
 })
 
 export default connect(
