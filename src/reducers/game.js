@@ -17,8 +17,6 @@ const initialState = {
 const game = (state = initialState, action) => {
   switch (action.type) {
     case 'INCREASE_SCORE':
-      // console.log('action id', action.id)
-      // return state
       return {
         ...state,
         players: state.players.map(player =>
