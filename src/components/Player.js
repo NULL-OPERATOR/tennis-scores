@@ -1,16 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Player = ({ score, name }) => (
+const Player = ({ scoreText, name }) => (
   <div>
-    hello -
-    {name} -
-    {score}
+    {name} - {scoreText}
   </div>
 )
 
 Player.propTypes = {
-  score: PropTypes.number.isRequired,
+  scoreText: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired
 }
 

@@ -1,21 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const AddScore = ({ active, onClick }) => {
-  console.log(active, onClick)
-
-  if (active) {
+const AddScore = ({ playerName, winner, onClick }) => {
+  if (winner === '') {
     return (
-      <button onClick={onClick}>score</button>
+      <button onClick={onClick}>{playerName} scored</button>
     )
   }
   return (
-    <button disabled>score</button>
+    <button disabled>{playerName} scored</button>
   )
 }
 
 AddScore.propTypes = {
-  active: PropTypes.string.isRequired,
+  winner: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired
 }
 
