@@ -1,11 +1,13 @@
-var express = require('express')
-var app = express()
-var path = require('path')
-var server = require('http').createServer(app)
-var port = process.env.PORT || 3000
+const express = require('express')
+const path = require('path')
+const http = require('http')
 
-server.listen(port, function () {
+const app = express()
+const server = http.createServer(app)
+const port = process.env.PORT || 3000
+
+server.listen(port, () => {
   console.log('Server listening at port %d', port)
 })
 
-app.use(express.static(path.join(__dirname, 'build')))
+app.use(express.static(path.join(__dirname, 'public')))
