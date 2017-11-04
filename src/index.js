@@ -7,9 +7,9 @@ import reducer from './reducers'
 
 const store = createStore(reducer)
 
-// store.subscribe(() => {
-//   console.log('ayyy', store.getState())
-// })
+store.subscribe(() => {
+  console.log('yessss', store.getState())
+})
 
 render(
   <Provider store={store}>
