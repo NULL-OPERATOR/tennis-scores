@@ -2,13 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Status = ({ winner }) => {
-  console.log(winner)
-  if (winner) {
-    return (
-      <h1>{winner}</h1>
-    )
-  }
-  return null
+  const message = winner ? winner + ' won!' : ''
+  return <h1 className="status">{message}</h1>
 }
 
 Status.propTypes = {
