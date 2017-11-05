@@ -5,8 +5,7 @@ const AddScore = ({playerName, winner, onClick}) => {
   const disabled = winner !== ''
   return (
     <button onClick={onClick} disabled={disabled}>
-      {playerName}
-      scored
+      {playerName} scored
     </button>
   )
 }
