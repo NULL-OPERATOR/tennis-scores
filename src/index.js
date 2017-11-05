@@ -8,10 +8,6 @@ import css from './styles/index.css'
 
 const store = createStore(reducer)
 
-// store.subscribe(() => {
-//   console.log('yessss', store.getState())
-// })
-
 render(
   <Provider store={store}>
     <App />

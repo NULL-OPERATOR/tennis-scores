@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { increaseScore } from '../actions'
 import AddScore from '../components/AddScore'
 
-
 const AddScoreList = ({ players, winner, onScoreClick }) => (
   <div>
     {players.map(player =>

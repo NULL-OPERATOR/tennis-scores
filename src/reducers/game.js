@@ -1,3 +1,5 @@
+import { INCREASE_SCORE, RESET_GAME } from '../actions'
+
 const initialState = {
   winner: '',
   players: [
@@ -24,8 +26,19 @@ const scoresToText = {
   4: 'Advantage'
 }
 
+const game = (state = initialState, action) => {
+  switch (action.type) {
+    case INCREASE_SCORE:
+      return updateGame(state, action.id)
+    case RESET_GAME:
+      return resetGame(state)
+    default:
+      return state
+  }
+}
 
-const updateGameState = (state, id) => {
+// how to refactor?
+const updateGame = (state, id) => {
   let { winner, players } = state
   const scoringPlayer = players.find(player => player.id === id)
   const otherPlayer = players.find(player => player.id !== id)
@@ -77,15 +90,5 @@ const resetGame = (state) => ({
   }))
 })
 
-const game = (state = initialState, action) => {
-  switch (action.type) {
-    case 'INCREASE_SCORE':
-      return updateGameState(state, action.id)
-    case 'RESET_GAME':
-      return resetGame(state)
-    default:
-      return state
-  }
-}
 
 export default game

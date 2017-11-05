@@ -2,7 +2,6 @@ import { connect } from 'react-redux'
 import { resetGame } from '../actions'
 import Reset from '../components/Reset'
 
-
 const mapStateToProps = (state) => ({
 })
 
