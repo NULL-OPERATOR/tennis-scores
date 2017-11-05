@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Player = ({ scoreText, name }) => (
-  <div>
-    {name} - {scoreText}
+  <div className="player">
+    <p>{name}</p>
+    <h2>{scoreText}</h2>
   </div>
 )
 
