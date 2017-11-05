@@ -1,4 +1,4 @@
-# :palm_tree: TENNIS SCORING :palm_tree:
+# :palm_tree: TENNIS SCORES :palm_tree:
 ##### scoring a tennis game with redux.
 
 scores a *game* (not set or match), also runs on node 8.9.0
