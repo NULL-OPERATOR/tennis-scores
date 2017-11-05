@@ -1,3 +1,5 @@
 node_modules/
 public/bundle.js
 *.log
+package-lock.json
+.eslintrc.js
