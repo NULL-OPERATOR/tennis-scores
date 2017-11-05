@@ -1,0 +1,50 @@
+body {
+  font-family: helvetica, sans-serif;
+}
+
+button {
+  background-color: #efefef;
+  font-size: 15px;
+  font-weight: lighter;
+  padding: 10px;
+  margin: 15px;
+  border: none;
+  outline: none;
+  position: relative;
+}
+
+button:hover:active {
+  top: 1px;
+  background: #dcdcdc;
+}
+
+button:disabled {
+  color: lightgrey;
+}
+
+.app {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-list {
+  display: flex;
+  text-align: center;
+}
+
+.player {
+  min-width: 150px;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.add-score-list {
+  flex-direction: column;
+}
+
+.status {
+  min-height: 50px;
+}

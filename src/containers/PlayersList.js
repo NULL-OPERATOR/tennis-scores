@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import Player from '../components/Player'
 
 const PlayersList = ({ players }) => (
-  <div>
+  <div className="player-list">
     {players.map(player =>
       <Player
         key={player.id}

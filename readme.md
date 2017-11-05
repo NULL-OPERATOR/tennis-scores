@@ -37,7 +37,7 @@ $ node server
 - redux: v3.7.2  
 - webpack: v3.8.1  
 
-questions:
+things I can't find:
 - naming conventions for containers??
 - is a component that returns null a bad idea?
 - mapping components in containers? or have a separate component?

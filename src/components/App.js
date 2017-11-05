@@ -5,7 +5,7 @@ import AddScoreList from '../containers/AddScoreList'
 import ResetContainer from '../containers/ResetContainer'
 
 const App = () => (
-  <div>
+  <div className="app">
     <PlayersList />
     <GameStatus />
     <AddScoreList />
