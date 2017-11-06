@@ -37,7 +37,6 @@ const game = (state = initialState, action) => {
   }
 }
 
-// how to refactor?
 const updateGame = (state, id) => {
   let { winner, players } = state
   const scoringPlayer = players.find(player => player.id === id)

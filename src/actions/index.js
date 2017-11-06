@@ -7,6 +7,6 @@ export const increaseScore = id => ({
 
 export const RESET_GAME = 'RESET_GAME'
 
-export const resetGame = id => ({
+export const resetGame = () => ({
   type: RESET_GAME,
 })
