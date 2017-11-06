@@ -11,6 +11,7 @@ const AddScore = ({playerName, winner, onClick}) => {
 }
 
 AddScore.propTypes = {
+  playerName: PropTypes.string.isRequired,
   winner: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired
 }
