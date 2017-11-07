@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const AddScore = ({playerName, winner, onScoreClick}) => {
   const disabled = winner !== ''
   return (
-    <button onClick={onClick} disabled={disabled}>
+    <button onClick={onScoreClick} disabled={disabled}>
       {playerName} scored
     </button>
   )
